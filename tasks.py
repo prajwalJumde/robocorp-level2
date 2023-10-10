@@ -110,5 +110,7 @@ def log_in():
     page.click("button:text('Log in')")    
 
 def create_zip_file_of_all_receipts():
+    out_dir = 'output'
+    receipt_dir = 'receipts'
     zip_file_name = os.path.join(out_dir, "all_receipts.zip")
     Archive().archive_folder_with_zip(receipt_dir, zip_file_name)
